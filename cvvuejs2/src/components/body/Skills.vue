@@ -1,11 +1,12 @@
 <template>
-    <div id ="cv-footer" class="">
-        footer - haeseong.han@gmail.com - modify later
+    <div id="cv-skills">
+        SKILLS - modify later
     </div>
 </template>
+
 <script>
 export default {
-      data() {
+    data() {
         return {
             //
         }
@@ -15,10 +16,9 @@ export default {
     },
     methods: {
             //
-    }
+    }  
 }
 </script>
 <style>
 
 </style>
-
