@@ -7,7 +7,7 @@
 export default {
       data() {
         return {
-            //
+            // using store to import email
         }
     },
     computed: {

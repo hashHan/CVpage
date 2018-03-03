@@ -1,11 +1,11 @@
 <template>
     <div id="cv-header" class=" text-center">
-        <div id="cv-name"><h1 id="cv-name-font" class="display-4 font-weight-bold">HAESEONG HAN</h1></div>
-        <div id="cv-email"><h6 class="">haeseong.han@gmail.com</h6></div>
-        <div id="cv-homepage"><h6><a href="#">Github Page : address for printing</a></h6></div>
+        <div id="cv-name"><h1 id="cv-name-font" class="display-4 font-weight-bold">{{ name }}</h1></div>
+        <div id="cv-email"><h6 class="">{{ email }}</h6></div>
+        <div id="cv-homepage"><h6><a :href="homepage">Github Page : {{ homepage }}</a></h6></div>
         <div class="notimportant d-none d-sm-block">
-          <div id="phone">phone - v-if</div>
-          <div id="address">address - v-if</div>
+          <div id="phone">{{ phone }}</div>
+          <div id="address">{{ address }}</div>
         </div>
     </div>  
 </template>
@@ -15,7 +15,11 @@
 export default {
     data() {
         return {
-            // isDropdownOpen: false
+            name: "HAESEONG HAN",
+            email: "haeseong.han@gmail.com",
+            homepage: "#",
+            phone: "phone - v-if",
+            address: "address - v-if",
         }
     },
     computed: {
