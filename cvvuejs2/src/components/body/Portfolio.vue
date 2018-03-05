@@ -7,39 +7,24 @@
 
 <script>
 import Section from './Section.vue';
+import {mapGetters} from 'vuex';
+
 export default {
     data() {
         return {
-            items:  [
-                       { 
-                            Company: ["self"],
-                            Location: ["self"],
-                            Title: ["bootstrap4"],
-                            StartTime : [2018],
-                            EndTime: [2018],
-                            Description: ["link to a github page", "link to a github page 2"]
-                               
-                       },
-                       { 
-                            Company: ["you"],
-                            Location: ["you"],
-                            Title: ["Vuejs2"],
-                            StartTime : [2018],
-                            EndTime: [2018],
-                            Description: ["link to a github page", "link to a github page 2"]
-                               
-                       }                    
-                    ]
+         //
         }
     },
     computed: {
-            //
+        ...mapGetters({
+                items: 'getportfolio' //getter
+            })
     },
     methods: {
             //
     },
     components: {
-    appSection: Section,
+        appSection: Section,
     }  
 }
 </script>
