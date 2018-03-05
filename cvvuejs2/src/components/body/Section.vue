@@ -1,13 +1,16 @@
 <template>
     <div class="common-section">
-        <div class="cv-section-body">
+        <div class="cv-section-title border-bottom">
+            <h5>{{ sectionTitle }}</h5>
+        </div>
+        <div class="cv-section-body border-bottom">
             <div v-for="(item, index) in items" :key="index" class="cv-section-item">
                 <div class="row justify-content-between">
                     <div class="col item-company">
                         <span class="font-weight-bold">{{ item.Company[0] }}</span>
                         <span v-if="item.Company[1]" class="xxs">({{ item.Company[1] }})</span>
                     </div>
-                    <div class="col item-location text-right d-none d-sm-block">
+                    <div class="col-2.5 item-location text-right d-none d-sm-block">
                         <span>{{ item.Location[0] }}</span>
                         <span v-if="item.Location[1]" class="xxs">({{ item.Location[1] }})</span>
                     </div>
@@ -17,7 +20,7 @@
                         <span>{{ item.Title[0] }}</span>
                         <span v-if="item.Title[1]" class="xxs">({{ item.Title[1] }})</span>                      
                     </div>
-                    <div class="col item-time text-right d-none d-sm-block">
+                    <div class="col-2.5 item-time text-right d-none d-sm-block">
                         <span v-for="(time, index) in item.StartTime" :key="index" class="item-start-time"> {{ time }}</span>
                         <span> - </span>
                         <span v-for="(time, index) in item.EndTime" :key="index" class="item-end-time"> {{ time }}</span>
@@ -32,8 +35,10 @@
 </template>
 
 <script>
+//import Bodynav from './Bodynav.vue';
+
 export default {
-    props: ['items'],
+    props: ['items', 'sectionTitle'],
     data() {
         return {
             //
@@ -44,7 +49,10 @@ export default {
     },
     methods: {
             //
-    }  
+    },
+    components: {
+        //appBodynav: Bodynav,
+    }    
 }
 </script>
 <style>

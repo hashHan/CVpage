@@ -3,12 +3,14 @@ import education from '../../data/sectiondata/education';
 import information from '../../data/sectiondata/information';
 import portfolio from '../../data/sectiondata/portfolio';
 import work from '../../data/sectiondata/work';
+import skills from '../../data/sectiondata/skills';
 
 const state = {
     education,
     information,
     portfolio,
-    work
+    work,
+    skills
 };
 
 const mutations = {
@@ -47,6 +49,9 @@ const getters = {
     getinformation: state => {
         return state.information;
     },   
+    getskills: state => {
+        return state.skills;
+    }  
 };
 
 export default {

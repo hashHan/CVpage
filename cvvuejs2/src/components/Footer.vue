@@ -1,6 +1,7 @@
 <template>
     <div id ="cv-footer" class="">
-        footer - haeseong.han@gmail.com - modify later
+        Add Home button
+        Add social
     </div>
 </template>
 <script>

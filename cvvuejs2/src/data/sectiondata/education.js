@@ -7,39 +7,40 @@ export default [
          EndTime: ["ATTENDING"],
          Description: [
              "Attending MicroMasters Program in Data Science from edX, in partnership with UCSanDiego.", 
-             "Coursework: Big Data Analytics using Spark, Machine Learning Fundamentals, Statistics and Probability in Data Science using Python, Python for Data Science",
-             "jupyter notebooks, pandas, numpy, matplotlib, scikit-learn, nltk"
+             "Coursework: Big Data Analytics using Spark(intended), Machine Learning Fundamentals(enrolled), Statistics and Probability in Data Science using Python(finished), Python for Data Science(finished)",
+             "Jupyter notebooks, Pandas, Numpy, Matplotlib, Scikit-learn, Nltk"
              ]
             
     },
     { 
          Company: ["NATIONAL INSTITUTE FOR LIFELONG EDUCATION","NILE"],
-         Location: ["SEOUL"],
+         Location: ["ONLINE"],
          Title: ["Computer Engineering"],
          StartTime : [2016],
          EndTime: [2017],
          Description: [
              "Earned 36 credits on undergraduate_level courses in computer engineering from 2016.", 
-             "Coursework: Data Structures; Computer System; Network_1; System Programming; Algorithms; Digital Engineering; Microprocessor_1; Computer Architecture and Organization; Databases; Discrete Mathematics; Software Engineering; Operation System",
+             "Coursework: Data Structures; Computer System; Network(1); System Programming; Algorithms; Digital Engineering; Microprocessor(1); Computer Architecture and Organization; Databases; Discrete Mathematics; Software Engineering; Operation System",
              "GPA: 4.17/4.5 ( 95.8/100 )"
              ]
             
     },
     { 
          Company: ["CHUNGNAM NATIONAL UNIVERSITY SCHOOL OF MEDICINE"],
-         Location: ["DAEJEON"],
+         Location: ["DAEJEON", "SOUTH KOREA"],
          Title: ["Medicine", "M.D. Candidate"],
          StartTime : ["MARCH", 2016],
          EndTime: ["Leave of Absence"],
          Description: [
-             "between second year and third year"
+             "Between second year and third year",
+             "Admitted with Distinction"
              ]
             
     },     
     { 
          Company: ["YONSEI UNIVERSITY"],
-         Location: ["SEOUL"],
-         Title: ["B.A in Business Administration", "B.A. in Economics","Minored in Applied Statistics"],
+         Location: ["SEOUL", "SOUTH KOREA"],
+         Title: ["B.A in Business Administration", "Majored in Economics, Minored in Applied Statistics"],
          StartTime : [],
          EndTime: ["Aug", 2014],
          Description: [

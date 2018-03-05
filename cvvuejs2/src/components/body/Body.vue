@@ -10,11 +10,11 @@
     </div>
 </template>
 <script>
-import Work from './Work.vue';
-import Education from './Education.vue';
-import Portfolio from './Portfolio.vue';
-import Otherinfo from './Otherinfo.vue';
-import Skills from './Skills.vue';
+import Work from './bodysection/Work.vue';
+import Education from './bodysection/Education.vue';
+import Portfolio from './bodysection/Portfolio.vue';
+import Otherinfo from './bodysection/Otherinfo.vue';
+import Skills from './bodysection/Skills.vue';
 
 export default {
     data() {

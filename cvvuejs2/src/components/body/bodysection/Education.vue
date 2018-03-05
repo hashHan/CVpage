@@ -1,18 +1,17 @@
 <template>
-    <div id="cv-education" class="section border-top border-bottom">
-        <div class="cv-section-title border-bottom"><h5>EDUCATION</h5></div>
-        <app-section :items="items"></app-section>
+    <div id="cv-education" class="section">
+        <app-section :items="items" :sectionTitle="sectionTitle"></app-section>
     </div>  
 </template>
 
 <script>
-import Section from './Section.vue';
+import Section from '../Section.vue';
 import {mapGetters} from 'vuex';
 
 export default {
     data() {
         return {
-            //
+            sectionTitle: "Education"
         }
     },
     computed: {
@@ -25,7 +24,7 @@ export default {
             //
     },
     components: {
-    appSection: Section,
+        appSection: Section,
     }    
 }
 </script>
