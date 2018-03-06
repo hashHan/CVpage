@@ -5,10 +5,10 @@ export default [
     },
     { 
         Section: ["WORKING KNOWLEDGE"],
-        Contents: ["ES6","RESTful", "SQL","..."]            
+        Contents: ["MV*","ES6","RESTful", "SQL","..."]            
     },         
     { 
         Section: ["TOOLS"],
-        Contents: ["GULP","GIT","WEBPACK","..."]            
+        Contents: ["GIT","GULP","WEBPACK","..."]            
     }                 
 ]

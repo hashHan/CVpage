@@ -1,6 +1,7 @@
 <template>
     <div id="cv-otherinfo">
         other information - modify later
+        MAYbE unnecessary 
     </div>
 </template>
 

@@ -1,16 +1,22 @@
 <template>
-    <div id="cv-header" class=" text-center">
-        <div id="cv-name"><h1 id="cv-name-font" class="display-4 font-weight-bold">{{ name }}</h1></div>
-        <div id="cv-email"><h6 class="">{{ email }}</h6></div>
-        <div id="cv-homepage"><h6><a :href="homepage">Github Page : {{ homepage }}</a></h6></div>
-        <div class="notimportant d-none d-sm-block">
-          <div id="phone">{{ phone }}</div>
-          <div id="address">{{ address }}</div>
+    <div id="cv-header" class="row justify-content-between">
+        <div class="col-2"></div>
+        <div class="col col-md-auto text-center">
+            <div id="cv-name"><h1 id="cv-name-font" class="display-4 font-weight-bold">{{ name }}</h1></div>
+            <div id="cv-email"><h6 class="">{{ email }}</h6></div>
+            <div id="cv-homepage"><h6><a :href="homepage">Github Page : {{ homepage }}</a></h6></div>
+            <div class="notimportant d-none d-sm-block">
+                <div id="phone">{{ phone }}</div>
+                <div id="address">{{ address }}</div>
+            </div>
         </div>
+        <div class="col-2 align-self-center"><appNav></appNav></div>
+
     </div>  
 </template>
 <script>
 // import {mapActions} from 'vuex';
+import Nav from './Nav.vue';
 
 export default {
     data() {
@@ -21,6 +27,9 @@ export default {
             phone: "phone - v-if",
             address: "address - v-if",
         }
+    },
+    components: {
+            appNav: Nav
     },
     computed: {
         // funds() {

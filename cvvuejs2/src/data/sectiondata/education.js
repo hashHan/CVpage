@@ -8,7 +8,7 @@ export default [
          Description: [
              "Attending MicroMasters Program in Data Science from edX, in partnership with UCSanDiego.", 
              "Coursework: Big Data Analytics using Spark(intended), Machine Learning Fundamentals(enrolled), Statistics and Probability in Data Science using Python(finished), Python for Data Science(finished)",
-             "Jupyter notebooks, Pandas, Numpy, Matplotlib, Scikit-learn, Nltk"
+             "Jupyter notebooks, Pandas, Numpy, Matplotlib, Scikit-learn, NLTK"
              ]
             
     },
@@ -20,7 +20,7 @@ export default [
          EndTime: [2017],
          Description: [
              "Earned 36 credits on undergraduate_level courses in computer engineering from 2016.", 
-             "Coursework: Data Structures; Computer System; Network(1); System Programming; Algorithms; Digital Engineering; Microprocessor(1); Computer Architecture and Organization; Databases; Discrete Mathematics; Software Engineering; Operation System",
+             "Coursework: Data Structures, Computer System, Network(1), System Programming, Algorithms, Digital Engineering, Microprocessor(1), Computer Architecture and Organization, Databases, Discrete Mathematics, Software Engineering, Operation System",
              "GPA: 4.17/4.5 ( 95.8/100 )"
              ]
             

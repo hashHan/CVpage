@@ -1,24 +1,18 @@
 <template>
   <div class="container" style="max-width: 800px">
-    <app-header></app-header>
-    <app-body></app-body>
-    <app-footer></app-footer>  
-
-  
+    <div><app-header></app-header></div>
+    <div><router-view></router-view></div>
   </div>
 
 </template>
 
 <script>
+    import Home from './components/Home.vue';
     import Header from './components/Header.vue';
-    import Footer from './components/Footer.vue';
-    import Body from './components/body/Body.vue';
-
     export default {
         components: {
-            appHeader: Header,
-            appFooter: Footer,
-            appBody: Body
+            appHome: Home,
+            appHeader: Header
         }
     }
 </script>
