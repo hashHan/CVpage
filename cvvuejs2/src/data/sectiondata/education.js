@@ -40,7 +40,7 @@ export default [
     { 
          Company: ["YONSEI UNIVERSITY"],
          Location: ["SEOUL", "SOUTH KOREA"],
-         Title: ["B.A in Business Administration", "Majored in Economics, Minored in Applied Statistics"],
+         Title: ["B.A in Business Administration", "2nd Major: Economics, Minor: Applied Statistics"],
          StartTime : [],
          EndTime: ["Aug", 2014],
          Description: [

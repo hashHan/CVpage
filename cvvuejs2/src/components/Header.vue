@@ -10,12 +10,11 @@
                 <div id="address">{{ address }}</div>
             </div>
         </div>
-        <div class="col-2 align-self-center"><appNav></appNav></div>
+        <div class="col-2 align-self-right"><appNav></appNav></div>
 
     </div>  
 </template>
 <script>
-// import {mapActions} from 'vuex';
 import Nav from './Nav.vue';
 
 export default {
@@ -32,29 +31,10 @@ export default {
             appNav: Nav
     },
     computed: {
-        // funds() {
-        //     return this.$store.getters.funds;
-        // }
+        // 
     },
     methods: {
-        // ...mapActions({
-        //     randomizeStocks: 'randomizeStocks',
-        //     fetchData: 'loadData'
-        // }),
-        // endDay() {
-        //     this.randomizeStocks();
-        // },
-        // saveData() {
-        //     const data = {
-        //         funds: this.$store.getters.funds,
-        //         stockPortfolio: this.$store.getters.stockPortfolio,
-        //         stocks: this.$store.getters.stocks
-        //     };
-        //     this.$http.put('data.json', data);
-        // },
-        // loadData() {
-        //     this.fetchData();
-        // }
+        // 
     }
 }
 </script>
