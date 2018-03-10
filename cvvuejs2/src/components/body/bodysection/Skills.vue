@@ -1,5 +1,5 @@
 <template>
-    <div id="cv-skills" class="section d-none d-sm-block">
+    <div id="cv-skills" class="">
         <div class="cv-section-title border-bottom">
             <h5>{{ sectionTitle }}</h5>
         </div>
@@ -40,6 +40,6 @@ export default {
     }    
 }
 </script>
-<style>
+<style style lang="scss">
 
 </style>

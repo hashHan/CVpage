@@ -11,7 +11,7 @@ import {mapGetters} from 'vuex';
 export default {
     data() {
         return {
-           sectionTitle: "WORK EXPERIENCE"
+           sectionTitle: "EXPERIENCE"
         }
     },
     computed: {
@@ -28,6 +28,6 @@ export default {
     }
 }
 </script>
-<style>
+<style style lang="scss">
 
 </style>

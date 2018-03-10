@@ -28,12 +28,8 @@ export default {
   
 }
 </script>
-<style scoped>
-.copyright {
-    font-size: 14px;
-    margin-bottom: 0;
-    text-align: center;
-}
+<style style lang="scss">
+
 </style>
 
 

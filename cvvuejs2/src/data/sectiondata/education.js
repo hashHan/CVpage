@@ -26,7 +26,7 @@ export default [
             
     },
     { 
-         Company: ["CHUNGNAM NATIONAL UNIVERSITY SCHOOL OF MEDICINE"],
+         Company: ["CHUNGNAM NATIONAL UNIVERSITY", "SCHOOL OF MEDICINE"],
          Location: ["DAEJEON", "SOUTH KOREA"],
          Title: ["Medicine", "M.D. Candidate"],
          StartTime : ["MARCH", 2016],

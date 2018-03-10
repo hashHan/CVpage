@@ -1,5 +1,5 @@
 <template>
-    <div id="cv-header" class="row justify-content-between">
+    <div id="header" class="row justify-content-between">
         <div class="col-2"></div>
         <div class="col col-md-auto text-center">
             <div id="cv-name"><h1 id="cv-name-font" class="display-4 font-weight-bold">{{ name }}</h1></div>
@@ -10,7 +10,7 @@
                 <div id="address">{{ address }}</div>
             </div>
         </div>
-        <div class="col-2 align-self-right"><appNav></appNav></div>
+        <div class="col-2 text-right"><appNav></appNav></div>
 
     </div>  
 </template>
@@ -23,8 +23,8 @@ export default {
             name: "HAESEONG HAN",
             email: "haeseong.han@gmail.com",
             homepage: "#",
-            phone: "phone - v-if",
-            address: "address - v-if",
+            phone: "phone",
+            address: "address",
         }
     },
     components: {
@@ -38,5 +38,10 @@ export default {
     }
 }
 </script>
+<style style lang="scss">
+
+
+
+</style>
 
 
