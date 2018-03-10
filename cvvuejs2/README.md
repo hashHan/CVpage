@@ -1,6 +1,11 @@
-# cvvuejs2
+# My CV page
 
-> A Vue.js project
+> This CV is made with many feature of Vue.js
+Components, Routing, Store, etc...
+Please read commits I made. 
+You can easily wrtie your own CV by putting your data in /data/sectiondata/*.js files.
+My all CSS(SCSS) features are in styles of 'App.vue'. You can edit styles yourself to make your own themes.
+
 
 ## Build Setup
 
