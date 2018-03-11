@@ -1,12 +1,12 @@
 # My CV page
 
-> This CV is made with many feature of Vue.js
+> This CV is made with many features of Vue.js
 Components, Routing, Store, etc...
 
 Deployed version: https://cvhaeseong.firebaseapp.com/
 
 Please read commits I made. 
-You can easily wrtie your own CV by putting your data in /data/sectiondata/*.js files.
+You can easily wrtie your own CV by putting your datas in /data/sectiondata/*.js files.
 My all CSS(SCSS) features are in styles of 'App.vue'. You can edit styles yourself to make your own themes.
 
 MIT LICENSE.
