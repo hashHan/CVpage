@@ -1,6 +1,8 @@
 <template>
     <div id="cv-otherinfo" class="section">
-        <app-section :items="items" :sectionTitle="sectionTitle"></app-section>
+        <app-section :items="items" :sectionTitle="sectionTitle">
+            <span slot="locationlink">Link to POST</span>
+        </app-section>
     </div>
 </template>
 

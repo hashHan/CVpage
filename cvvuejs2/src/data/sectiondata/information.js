@@ -1,7 +1,7 @@
 export default [
     { 
         Company: ["WEB"],
-        Location: ["POST"],
+        Location: ["https://bloghaeseong.firebaseapp.com/posts"],
         Title: ["Udacity and Udemy"],
         StartTime : [],
         EndTime: [2018],

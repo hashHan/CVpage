@@ -17,7 +17,7 @@ export default [
          Location: ["SEOUL", "SOUTH KOREA"],
          Title: ["INTERNSHIP",""],
          StartTime : ["Feb", 2014],
-         EndTime: ["Apr", 2016],
+         EndTime: ["Apr", 2014],
          Description: [
              "Managed FORUM about international regulations of OTC markets.", 
              "Managed the awards ceremony.",

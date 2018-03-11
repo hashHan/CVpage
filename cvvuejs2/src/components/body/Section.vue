@@ -16,7 +16,7 @@
                     <div class="col-2.5 item-location text-right">
                         <span>
                             <span v-if="!checkurl(item.Location[0])">{{ item.Location[0] }}</span>
-                            <span v-else><a :href="item.Location[0]">Link to Project</a></span>
+                            <span v-else><a :href="item.Location[0]"><slot name="locationlink">Link to Project</slot></a></span>
                         </span>
                         <span v-if="item.Location[1]" class="xxs">({{ item.Location[1] }})</span>
                     </div>
