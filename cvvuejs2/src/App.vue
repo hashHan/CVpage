@@ -104,6 +104,12 @@ $max-width: 800px;
     font-weight: 500;
     color: $text-color;
 }
+.item-company-link{
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+}
 .item-company{
     color: darken($text-color-sub,15%);
 }

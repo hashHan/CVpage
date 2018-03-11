@@ -19,7 +19,7 @@ export default [
          StartTime : [2016],
          EndTime: [2017],
          Description: [
-             "Earned 36 credits on undergraduate_level courses in computer engineering from 2016.", 
+             "36 credits on undergraduate_level courses in computer engineering from 2016.", 
              "Coursework: Data Structures, Computer System, Network(1), System Programming, Algorithms, Digital Engineering, Microprocessor(1), Computer Architecture and Organization, Databases, Discrete Mathematics, Software Engineering, Operation System",
              "GPA: 4.17/4.5 ( 95.8/100 )"
              ]

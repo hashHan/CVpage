@@ -8,10 +8,16 @@
                 <div class="row justify-content-between">
                     <div class="col item-company">
                         <span class="font-weight-bold item-company-title">{{ item.Company[0] }}</span>
-                        <span v-if="item.Company[1]" class="xxs">({{ item.Company[1] }})</span>
+                        <span v-if="item.Company[1]" class="xxs">       
+                            <span v-if="!checkurl(item.Company[1])">({{ item.Company[1] }})</span>
+                            <span v-else><a :href="item.Company[1]" class="item-company-link"> (LINK)</a></span>
+                        </span>
                     </div>
                     <div class="col-2.5 item-location text-right">
-                        <span>{{ item.Location[0] }}</span>
+                        <span>
+                            <span v-if="!checkurl(item.Location[0])">{{ item.Location[0] }}</span>
+                            <span v-else><a :href="item.Location[0]">Link to Project</a></span>
+                        </span>
                         <span v-if="item.Location[1]" class="xxs">({{ item.Location[1] }})</span>
                     </div>
                 </div>
@@ -47,7 +53,14 @@ export default {
             //
     },
     methods: {
-            //
+        checkurl(str){
+            const strurl=str.slice(0, 4);
+            if(strurl=="http"){
+                return true;
+            }else{
+                return false;
+            }
+        }
     },
     components: {
         //appBodynav: Bodynav,
