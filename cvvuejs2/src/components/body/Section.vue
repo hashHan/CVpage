@@ -6,14 +6,14 @@
         <div class="cv-section-body border-bottom">
             <div v-for="(item, index) in items" :key="index" class="cv-section-item">
                 <div class="row justify-content-between">
-                    <div class="col item-company">
+                    <div class="col item-company text-uppercase ">
                         <span class="font-weight-bold item-company-title">{{ item.Company[0] }}</span>
                         <span v-if="item.Company[1]" class="xxs">       
                             <span v-if="!checkurl(item.Company[1])">({{ item.Company[1] }})</span>
                             <span v-else><a :href="item.Company[1]" class="item-company-link"> (LINK)</a></span>
                         </span>
                     </div>
-                    <div class="col-2.5 item-location text-right">
+                    <div class="col-2.5 item-location text-uppercase text-right">
                         <span>
                             <span v-if="!checkurl(item.Location[0])">{{ item.Location[0] }}</span>
                             <span v-else><a :href="item.Location[0]"><slot name="locationlink">Link to Project</slot></a></span>
@@ -21,18 +21,19 @@
                         <span v-if="item.Location[1]" class="xxs">({{ item.Location[1] }})</span>
                     </div>
                 </div>
-                <div class="row justify-content-between font-italic">
+                <div class="row justify-content-between font-italic text-uppercase ">
                     <div class="col item-title">
                         <span>{{ item.Title[0] }}</span>
                         <span v-if="item.Title[1]" class="xxs">({{ item.Title[1] }})</span>                      
                     </div>
                     <div class="col-2.5 item-time text-right d-none d-sm-block">
-                        <span v-for="(time, index) in item.StartTime" :key="index" class="item-start-time"> {{ time }}</span>
-                        <span v-for="(time, index) in item.EndTime" :key="index" class="item-end-time">- {{ time }}</span>
+                        <span v-for="(time, index2) in item.StartTime" :key="index2" class="item-start-time"> {{ time }}</span>
+                        <span class="item-time-slash">-</span>
+                        <span v-for="(time, index3) in item.EndTime" :key="index3" class="item-end-time"> {{ time }}</span>
                     </div>
                 </div>
                 <ul class="item-descriptions d-none d-sm-block">
-                    <li v-for="(content, index) in item.Description" :key="index" class="item-description">{{ content }}</li>
+                    <li v-for="(content, index4) in item.Description" :key="index4" class="item-description">{{ content }}</li>
                 </ul>
             </div>
         </div>

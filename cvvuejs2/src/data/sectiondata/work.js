@@ -2,7 +2,7 @@ export default [
     { 
          Company: ["KIS PRICING","Affiliated with Moody's"],
          Location: ["SEOUL", "SOUTH KOREA"],
-         Title: ["Financial Analyst"],
+         Title: ["FINANCIAL ANALYST", "Fixed Income Department"],
          StartTime : ["Apr", 2014],
          EndTime: ["Feb", 2016],
          Description: [
@@ -25,9 +25,9 @@ export default [
             
     },
                            { 
-         Company: ["ROK AIRFORCE MCRC","Master Control & Reporting Center"],
+         Company: ["REPUBLIC OF KOREA AIRFORCE MCRC","Master Control & Reporting Center"],
          Location: ["OSAN", "SOUTH KOREA"],
-         Title: ["Aviation control technician", "Sergeant"],
+         Title: ["AVIATION CONTROL TECHNICIAN", "Sergeant"],
          StartTime : ["Nov", 2009],
          EndTime: ["Dec", 2011],
          Description: [

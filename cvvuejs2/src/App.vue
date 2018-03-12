@@ -1,8 +1,23 @@
 <template>
-  <div id="app" class="container">
-    <div><app-header></app-header></div>
-    <div><router-view></router-view></div>
-    <div><app-footer></app-footer></div>
+  <div id="app" ref="wholeapp" class="container">
+    <div class="row">
+      <div class="col-11">
+        <div class="row">
+          <div class="navshow col-2 "></div>
+          <div class="col"><app-header></app-header></div>
+          <div class="col-2 row align-items-center justify-content-center">
+            <app-nav class="navshow"></app-nav>
+            <button type="button" class="pdfshow btn btn-danger btn-sm"  @click="makeimagePDF"
+            data-toggle="popover" title="it takes a second." 
+            data-content="Please wait a second.">PDF</button>
+          </div>     
+        </div>
+        <div><router-view></router-view></div>
+        <div><app-footer></app-footer></div>
+       <!-- <img :src="srcdata" alt="" class="test"> -->
+       </div>
+      <div class="col pdfmargin"></div>
+    </div>
   </div>
 
 </template>
@@ -10,12 +25,69 @@
 <script>
 import Home from './components/Home.vue';
 import Header from './components/Header.vue';
+import Nav from './components/Nav.vue';
 import Footer from './components/Footer.vue';
+import jsPDF from 'jsPDF';
+import html2canvas from 'html2canvas';
+
 export default {
+    data () {
+      return {
+        //srcdata: '',
+      
+      }
+    },
+    methods: {
+        makeimagePDF () {
+            //alert('please wait a second.')
+            window.html2canvas = html2canvas; //Vue.js
+            let that = this;
+            let pdf = new jsPDF('p', 'mm', 'a4');//default value of jsPDF(orientation, unit, format, compress) //https://developer.tizen.org/community/tip-tech/creating-pdf-documents-jspdf?langredirect=1
+            let canvas = pdf.canvas;
+            const a4width = 210;
+            const a4height = 297;
+            const pageWidth = 205;
+            const pageHeight = pageWidth*(a4height/a4width); //a4 ratio
+            canvas.width = pageWidth;//let ele = document.querySelector(selector) // use $refs instead of it
+            canvas.height = pageHeight;
+            let ele = this.$refs.wholeapp; //should set to pdf.fromHTML(ele)
+            if(!ele){
+              console.warn(selector + ' is not exist.');
+              return false
+            }
+            let width = ele.offsetWidth; 
+            let height = ele.offsetHeight; 
+            let imgHeight = pageWidth * height/width; // calculate based on ele's height/width ratio
+           
+            html2canvas(ele).then(function(canvas) {
+                let position = 0;
+                const imgData = canvas.toDataURL('image/png');//HTMLCanvasElement.toDataURL()
+                //that.srcdata = imgData;//check for imaData // result: margin cut :( a problem with canvas in jsPDF
+                //console.log(imgData);
+                pdf.addImage(imgData, 'png', 0, position, pageWidth, imgHeight, undefined, 'slow')
+                //Paging, jspdf methods
+                let heightLeft = imgHeight; 
+                heightLeft -= pageHeight; //left height
+                
+                while (heightLeft >= 0) {
+                  position = heightLeft - imgHeight;
+                  pdf.addPage();
+                  pdf.addImage(imgData, 'png', 0, position, pageWidth, imgHeight);
+                  console.log(pdf)
+                  heightLeft -= pageHeight;
+                };
+
+                console.log(pdf);
+                pdf.save('test.pdf');	
+            });
+        },
+    },
     components: {
         appHome: Home,
         appFooter: Footer,
-        appHeader: Header
+        appHeader: Header,
+        appNav: Nav
+
     }
 }
 </script>
@@ -52,7 +124,6 @@ $max-width: 800px;
 
 #app{
   max-width: $max-width;
-  
 }
 
 @mixin tiny-screens() {
@@ -75,7 +146,16 @@ $max-width: 800px;
     @content;
   }
 }
-
+.navshow{
+  @include small-screens {
+    display:none;
+  }
+}
+.pdfshow{
+   @include smallmedium-screens {
+    display:none;
+  }
+}
 .xxs{
   @include tiny-screens {
     display:none;
@@ -133,7 +213,7 @@ $max-width: 800px;
     display:none;
   }
 }
-.item-end-time{//to Body.vue
+.item-end-time, .item-time-slash{//to Body.vue
   @include smallmedium-screens {
     display:none;
   }

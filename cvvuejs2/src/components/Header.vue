@@ -1,6 +1,6 @@
 <template>
     <div id="header" class="row justify-content-between">
-        <div class="col-2"></div>
+        <!-- <div class="col-2 text-center"></div> -->
         <div class="col col-md-auto text-center mb-3">
             <div id="cv-name"><h1 id="cv-name-font" class="display-4 font-weight-bold">{{ name }}</h1></div>
             <div id="cv-email"><h6>E-mail: {{ email }}</h6></div>
@@ -11,12 +11,12 @@
                 <div id="address">{{ address }}</div>
             </div>
         </div>
-        <div class="col-2 text-right"><appNav></appNav></div>
+        <!-- <div class="col-2 text-center"><appNav></appNav></div> -->
 
     </div>  
 </template>
 <script>
-import Nav from './Nav.vue';
+
 
 export default {
     data() {
@@ -30,13 +30,15 @@ export default {
         }
     },
     components: {
-            appNav: Nav
+            
+           
     },
     computed: {
         // 
     },
     methods: {
-        // 
+       
+        
     }
 }
 </script>
