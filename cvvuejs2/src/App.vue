@@ -1,5 +1,6 @@
 <template>
   <div id="app" ref="wholeapp" class="container">
+    <!-- <app-putter></app-putter> -->
     <div class="row">
       <div class="col-11">
         <div class="row">
@@ -27,6 +28,7 @@ import Home from './components/Home.vue';
 import Header from './components/Header.vue';
 import Nav from './components/Nav.vue';
 import Footer from './components/Footer.vue';
+import Putter from './components/Putter.vue';
 import jsPDF from 'jsPDF';
 import html2canvas from 'html2canvas';
 
@@ -78,7 +80,7 @@ export default {
                 };
 
                 console.log(pdf);
-                pdf.save('test.pdf');	
+                pdf.save('HaeseongHanCV.pdf');	
             });
         },
     },
@@ -86,7 +88,8 @@ export default {
         appHome: Home,
         appFooter: Footer,
         appHeader: Header,
-        appNav: Nav
+        appNav: Nav,
+        appPutter: Putter
 
     }
 }
