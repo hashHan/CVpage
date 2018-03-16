@@ -1,39 +1,37 @@
 //import data from '../../data/data';
 import education from '../../data/sectiondata/education';
 import information from '../../data/sectiondata/information';
-import portfolio from '../../data/sectiondata/portfolio';
+//import portfolio from '../../data/sectiondata/portfolio';
 import work from '../../data/sectiondata/work';
 import skills from '../../data/sectiondata/skills';
+import axios from 'axios';
 
 const state = {
     education,
     information,
-    portfolio,
+    portfolio: [],
     work,
     skills
 };
 
 const mutations = {
-    // 'SET_STOCKS' (state, stocks) {
-    //     state.stocks = stocks;
-    // },
-    // 'RND_STOCKS' (state) {
-    //     state.stocks.forEach(stock => {
-    //         stock.price = Math.round(stock.price * (1 + Math.random() - 0.5));
-    //     });
-    // }
+    updatedata(state, data) {
+        state.portfolio = data
+    }
 };
 
 const actions = {
-    // buyStock: ({commit}, order) => {
-    //     commit('BUY_STOCK', order);
-    // },
-    // initStocks: ({commit}) => {
-    //     commit('SET_STOCKS', stocks);
-    // },
-    // randomizeStocks: ({commit}) => {
-    //     commit('RND_STOCKS');
-    // }
+    loadData({commit}) {
+        axios.get('/body/portfolio.json')
+        .then(res => {
+          //console.log(res)
+          commit('updatedata', res.data)
+          //this.items = res.data;
+          //console.log(this.items);
+        })
+        .catch(error => console.log(error))
+    }
+        
 };
 
 const getters = {

@@ -22,5 +22,9 @@ new Vue({
   el: '#app',
   router,
   store,
+  created() {
+    //console.log(this.$store)
+    this.$store.dispatch('loadData') // dispatch loading
+  },
   render: h => h(App)
 })

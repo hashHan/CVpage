@@ -12,13 +12,13 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            sectionTitle: "PORTFOLIO",
-            items: []
+            sectionTitle: "PORTFOLIO"
+           // items: []
         }
     },
     computed: {
         ...mapGetters({
-               // items: 'getportfolio' //getter
+                 items: 'getportfolio' //getter
             })
     },
     methods: {
@@ -26,16 +26,16 @@ export default {
     },
     components: {
         appSection: Section,
-    },
-    created () {
-      axios.get('/body/portfolio.json')
-        .then(res => {
-          //console.log(res)
-          this.items = res.data;
-          console.log(this.items);
-        })
-        .catch(error => console.log(error))
-    }  
+    }
+    // created () {
+    //   axios.get('/body/portfolio.json')
+    //     .then(res => {
+    //       //console.log(res)
+    //       this.items = res.data;
+    //       console.log(this.items);
+    //     })
+    //     .catch(error => console.log(error))
+    // }  
 }
 </script>
 <style style lang="scss">
