@@ -5,7 +5,7 @@ import axios from 'axios'; //if want global
 
 import App from './App.vue'
 import { routes } from './routes';
-import store from './store/store';
+//import store from './store/store';
 
 Vue.use(VueRouter);
 //Vue.use(VueResource); use axios
@@ -21,10 +21,6 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
-  store,
-  created() {
-    //console.log(this.$store)
-    this.$store.dispatch('loadData') // dispatch loading
-  },
+  //store,
   render: h => h(App)
 })

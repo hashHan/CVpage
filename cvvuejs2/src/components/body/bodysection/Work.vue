@@ -6,26 +6,37 @@
 
 <script>
 import Section from '../Section.vue';
-import {mapGetters} from 'vuex';
+//import {mapGetters} from 'vuex';
+import axios from 'axios';
 
 export default {
     data() {
         return {
-           sectionTitle: "EXPERIENCE"
+           sectionTitle: "EXPERIENCE",
+           items: []
         }
     },
     computed: {
-        ...mapGetters({
-        items: 'getwork' //getter
-        })
-            //
+        // ...mapGetters({
+        // items: 'getwork' //getter
+        // })
+        //     //
     },
     methods: {
         //
     },
     components: {
         appSection: Section,
-    }
+    },
+    created () {
+      axios.get('/body/work.json')
+        .then(res => {
+          //console.log(res)
+          this.items = res.data;
+          console.log(this.items);
+        })
+        .catch(error => console.log(error))
+    }  
 }
 </script>
 <style style lang="scss">
