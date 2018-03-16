@@ -41,8 +41,6 @@
 </template>
 
 <script>
-//import Bodynav from './Bodynav.vue';
-
 export default {
     props: ['items', 'sectionTitle'],
     data() {
@@ -64,7 +62,7 @@ export default {
         }
     },
     components: {
-        //appBodynav: Bodynav,
+       
     }    
 }
 </script>

@@ -17,8 +17,6 @@
 </template>
 
 <script>
-//import Section from '../Section.vue';
-//import {mapGetters} from 'vuex';
 import axios from 'axios';
 
 export default {
@@ -29,16 +27,13 @@ export default {
         }
     },
     computed: {
-        // ...mapGetters({
-        // items: 'getskills' //getter
-        // })
-        //     //
+       
     },
     methods: {
             //
     },
     components: {
-        //appSection: Section,
+       
     },
     created () {
       axios.get('/body/skills.json')

@@ -8,7 +8,6 @@
 
 <script>
 import Section from '../Section.vue';
-//import {mapGetters} from 'vuex';
 import axios from 'axios';
 
 export default {
@@ -19,12 +18,10 @@ export default {
         }
     },
     computed: {
-        // ...mapGetters({
-        //         items: 'getinformation' //getter
-        //     })
+        
     },
     methods: {
-            //
+           
     },
     components: {
         appSection: Section,

@@ -6,7 +6,6 @@
 
 <script>
 import Section from '../Section.vue';
-//import {mapGetters} from 'vuex';
 import axios from 'axios';
 
 export default {
@@ -17,13 +16,10 @@ export default {
         }
     },
     computed: {
-        // ...mapGetters({
-        // items: 'geteducation' //getter
-        // })
-            //
+       
     },
     methods: {
-            //
+          
     },
     components: {
         appSection: Section,
@@ -31,7 +27,6 @@ export default {
     created () {
       axios.get('/body/education.json')
         .then(res => {
-          //console.log(res)
           this.items = res.data;
           console.log(this.items);
         })

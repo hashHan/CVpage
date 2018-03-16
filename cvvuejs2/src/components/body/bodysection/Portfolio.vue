@@ -7,7 +7,6 @@
 
 <script>
 import Section from '../Section.vue';
-//import {mapGetters} from 'vuex'; using axios instead of vuex 
 import axios from 'axios';
 
 export default {
@@ -18,12 +17,7 @@ export default {
         }
     },
     computed: {
-        // ...mapGetters({
-        //          items: 'getportfolio' //getter
-        //     })
-        // items(){
-        //     return this.$store.state;
-        // } 
+       
     },
     methods: {
         showitems(){
@@ -36,7 +30,6 @@ export default {
     created () {
       axios.get('/body/portfolio.json')
         .then(res => {
-          //console.log(res)
           this.items = res.data;
           console.log(this.items);
         })
