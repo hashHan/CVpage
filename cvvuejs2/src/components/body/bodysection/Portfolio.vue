@@ -28,7 +28,7 @@ export default {
         appSection: Section,
     },
     created () {
-      axios.get('https://cvhaeseong.firebaseio.com/body/portfolio.json')
+      axios.get('/body/portfolio.json')
         .then(res => {
           //console.log(res)
           this.items = res.data;
