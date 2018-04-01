@@ -3,8 +3,8 @@
         <div class="col col-md-auto text-center mb-3">
             <div id="cv-name"><h1 id="cv-name-font" class="display-4 font-weight-bold">{{ name }}</h1></div>
             <div id="cv-email"><h6>E-mail: {{ email }}</h6></div>
-            <div id="cv-homepage"><h6>BLOG: <a :href="homepage">{{ homepage }}</a></h6></div>
-            <div id="cv-git"><h6>GITHUB REPO: <a :href="GITHUBREPO">{{ GITHUBREPO }}</a></h6></div>
+            <div id="cv-homepage"><h6>BLOG: <a target="_blank" :href="homepage">{{ homepage }}</a></h6></div>
+            <div id="cv-git"><h6>GITHUB REPO: <a target="_blank" :href="GITHUBREPO">{{ GITHUBREPO }}</a></h6></div>
             <div v-if="false" class="notimportant d-none d-sm-block">
                 <div id="phone">{{ phone }}</div>
                 <div id="address">{{ address }}</div>

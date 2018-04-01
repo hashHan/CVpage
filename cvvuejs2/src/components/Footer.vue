@@ -5,12 +5,12 @@
           <div id="socialicon" class="col-md-4 mb-5 py-4">
             <ul class="list-inline text-center">
               <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/hashHan/">                                  
+                <a target="_blank" href="https://www.linkedin.com/in/hashHan/">                                  
                     <i class="fab fa-linkedin fa-3x"></i>                 
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://hashhan.github.io/">
+                <a target="_blank" href="https://hashhan.github.io/">
                     <i class="fab fa-github fa-3x"></i>             
                 </a>
               </li>

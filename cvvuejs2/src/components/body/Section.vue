@@ -10,13 +10,13 @@
                         <span class="font-weight-bold item-company-title">{{ item.Company[0] }}</span>
                         <span v-if="item.Company[1]" class="xxs">       
                             <span v-if="!checkurl(item.Company[1])">({{ item.Company[1] }})</span>
-                            <span v-else><a :href="item.Company[1]" class="item-company-link"> (LINK)</a></span>
+                            <span v-else><a target="_blank" :href="item.Company[1]" class="item-company-link"> (LINK)</a></span>
                         </span>
                     </div>
                     <div class="col-2.5 item-location text-uppercase text-right">
                         <span>
                             <span v-if="!checkurl(item.Location[0])">{{ item.Location[0] }}</span>
-                            <span v-else><a :href="item.Location[0]"><slot name="locationlink">Link to Project</slot></a></span>
+                            <span v-else><a target="_blank" :href="item.Location[0]"><slot name="locationlink">Link to Project</slot></a></span>
                         </span>
                         <span v-if="item.Location[1]" class="xxs">({{ item.Location[1] }})</span>
                     </div>
